@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { BrowserRouter,Routes,Route } from "react-router-dom";
-import Auth from "./Auth";
-import Journal from "./Journal";
-import ProtectedRoute from "./ProtectedRoute";
-import API from "./api";
+import Auth from "./pages/Auth";
+import Journal from "./pages/Journal";
+import ProtectedRoute from "./components/ProtectedRoute";
+import API from "./api/api";
 import { useDispatch } from "react-redux";
 import { logout, setUser } from "./features/auth/authSlice";
 
