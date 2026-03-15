@@ -7,8 +7,11 @@ const cors = require("cors");
 const journalRoutes = require("./routes/journal");
 const app = express();
 app.use(cors({
-  origin: "http://localhost:5173",//allow this frontend
-  credentials: true               //takes the jwt from above frontend
+  origin: [
+    "http://localhost:5173",
+    "https://arvyax-assignment-three.vercel.app"
+  ],
+  credentials: true
 }));
 
 app.use(express.json());

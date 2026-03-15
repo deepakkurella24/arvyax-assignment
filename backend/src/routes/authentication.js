@@ -55,12 +55,12 @@ router.post('/auth/login',async (req,res)=>{
         const bool=await user.validatePasswordFromDB(password)
         if(!bool) throw new Error('incorrect password')
         const jwtToken=await user.getJWT()
-        res.cookie('token',jwtToken, {
-            httpOnly: true,      
-            secure: false,        
-            sameSite: "Lax",    
+        res.cookie("token", jwtToken, {
+            httpOnly: true,
+            secure: true,
+            sameSite: "None",
             maxAge: 24 * 60 * 60 * 1000
-        })
+        });
         const {
             _id,
             name,
