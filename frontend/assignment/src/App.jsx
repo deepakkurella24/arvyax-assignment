@@ -5,7 +5,7 @@ import Journal from "./Journal";
 import ProtectedRoute from "./ProtectedRoute";
 import API from "./api";
 import { useDispatch } from "react-redux";
-import { logout, setUser } from "./authSlice";
+import { logout, setUser } from "./features/auth/authSlice";
 
 function App(){
 
