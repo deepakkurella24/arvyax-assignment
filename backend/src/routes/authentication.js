@@ -72,9 +72,13 @@ router.post('/auth/login',async (req,res)=>{
     }
 })
 
-router.post('/auth/logOut',async (req,res)=>{
-    res.cookie('token',null,{expires:new Date(0)})
-    res.send('logged out succesfully')
-})
+router.post('/auth/logOut', (req, res) => {
+  res.clearCookie("token", {
+    httpOnly: true,
+    secure: true,
+    sameSite: "None"
+  });
 
+  res.json({ message: "Logged out successfully" });
+});
 module.exports=router
