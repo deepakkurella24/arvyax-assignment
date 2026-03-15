@@ -1,8 +1,8 @@
 import { useState,useEffect } from "react";
-import API from "./api";
+import API from "../api/api";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { logout } from "./authSlice";
+import { logout } from "../features/auth/authSlice";
 
 function Journal() {
     const dispatch = useDispatch();

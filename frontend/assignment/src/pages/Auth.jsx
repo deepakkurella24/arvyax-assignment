@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import API from "./api";
+import API from "../api/api";
 import { useNavigate } from "react-router-dom";
-import { setUser } from "./authSlice";
+import { setUser } from "../features/auth/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 function Auth() {
