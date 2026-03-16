@@ -8,7 +8,7 @@ const userAuth = require('../middleware/userAuth');
 
 function validatePassword(value){
     if(!validater.isStrongPassword(value)){
-        throw new Error('invalid password')
+        throw new Error('set a strong password with length 8,min 1 uppercase letter,min 1 lowercase letter,min 1 number and min 1 special char')
     }
 }
 
